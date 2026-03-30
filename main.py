@@ -1,5 +1,5 @@
 import os
-
+import webbrowser
 import speech_recognition as sr
 import keyboard
 
@@ -34,6 +34,14 @@ def handle_command(text):
         elif "выключи компьютер" in text or "выключи пк" in text:
             print("💻 Выключаю компьютер...")
             os.system("shutdown /s /t 0")
+
+        elif "открой ютуб" in text or "открой youtube" in text:
+            print("🌐 Открываю YouTube")
+            webbrowser.open("https://www.youtube.com")
+
+        elif "открой steam" in text:
+            print("🎮 Открываю Steam")
+            os.startfile("C:\\Program Files (x86)\\Steam\\Steam.exe")
 
 
 def listen():
